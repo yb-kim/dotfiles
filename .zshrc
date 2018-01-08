@@ -52,7 +52,14 @@ ZSH_THEME="mh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git alias-tips)
+plugins=(
+    zsh-completions
+    git alias-tips
+    #zsh-autosuggestions
+    fasd #apt-get install fasd
+    tig #apt-get install tig
+    zsh-syntax-highlighting #git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,6 +101,8 @@ PATH=$PATH:/home/ybkim/local/gems/bin
 
 export GEM_HOME=$HOME/local/gems
 
+alias tia="tig --all"
+
 #PATH=$PATH:/home/ybkim/workspace/smm_asu/smm/common
 #PATH=$PATH:/home/ybkim/workspace/smm_asu/smm/code/utils
 #PATH=$PATH:/home/ybkim/workspace/smm_asu/smm/stack/utils
@@ -103,3 +112,6 @@ export GEM_HOME=$HOME/local/gems
 setopt extended_glob
 
 alias reindent="/usr/share/doc/python2.7/examples/Tools/scripts/reindent.py"
+alias config='/usr/bin/git --git-dir=/home/ybkim/.cfg/ --work-tree=/home/ybkim'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
