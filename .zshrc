@@ -2,8 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/ybkim/.oh-my-zsh
-
+  export ZSH=/home/ybkim/.oh-my-zsh 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -113,5 +112,7 @@ setopt extended_glob
 
 alias reindent="/usr/share/doc/python2.7/examples/Tools/scripts/reindent.py"
 alias config='/usr/bin/git --git-dir=/home/ybkim/.cfg/ --work-tree=/home/ybkim'
+alias pandoc='docker run --rm -it -v $(pwd):/app pandoc-latex pandoc $1 $@'
+alias latex='docker run --rm -it -v $(pwd):/app pandoc-latex pdflatex --shell-escape $1 $@'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
