@@ -67,3 +67,4 @@ source ~/.vim/rc/python_mode.vim
 source ~/.vim/rc/fugitive.vim
 source ~/.vim/rc/gitgutter.vim
 source ~/.vim/rc/emmet.vim
+source ~/.vim/rc/a.vim
