@@ -55,7 +55,7 @@ plugins=(
     zsh-completions
     git alias-tips
     #zsh-autosuggestions
-    fasd #apt-get install fasd
+    fasd #sudo add-apt-repository ppa:aacebedo/fasd && sudo apt-get update && sudo apt-get install fasd
     tig #apt-get install tig
     zsh-syntax-highlighting #git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 )
